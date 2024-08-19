@@ -30,6 +30,7 @@ if process_url_clicked:
     loader = UnstructuredURLLoader(urls=urls)
     main_placeholder.text("Data Loading...Started...✅✅✅")
     data = loader.load()
+    st.write(data)
     # split data
     text_splitter = RecursiveCharacterTextSplitter(
         separators=['\n\n', '\n', '.', ','],
@@ -39,15 +40,4 @@ if process_url_clicked:
     docs = text_splitter.split_documents(data)
     embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
     vectorindex_openai = FAISS.from_documents(docs, embeddings)
-    vectorindex_openai.save_local("faiss_index")
-    # Load the FAISS index from a file with dangerous deserialization allowed
-    vectorindex_openai = FAISS.load_local(
-        "faiss_index", 
-        embeddings, 
-        allow_dangerous_deserialization=True
-    )
-    chain = RetrievalQAWithSourcesChain.from_llm(llm=llm, retriever=vectorindex_openai.as_retriever())
-
-    query = "do you know about elon musk mother's name ?"
-    langchain.debug=True
-    st.write(chain({"question": query}, return_only_outputs=True))
+    

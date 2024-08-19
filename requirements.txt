@@ -4,3 +4,4 @@ unstructured
 streamlit
 langchain_google_genai
 langchain-community
+libmagic

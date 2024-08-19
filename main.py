@@ -39,5 +39,5 @@ if process_url_clicked:
     main_placeholder.text("Text Splitter...Started...✅✅✅")
     docs = text_splitter.split_documents(data)
     embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
-    vectorindex_openai = FAISS.from_documents(docs, embeddings)
+    # vectorindex_openai = FAISS.from_documents(docs, embeddings)
     

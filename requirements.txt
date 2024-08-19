@@ -3,3 +3,4 @@ faiss-cpu
 unstructured
 streamlit
 langchain_google_genai
+-U langchain-community

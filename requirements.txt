@@ -1,1 +1,8 @@
 
+langchain
+python-magic-bin
+python-magic
+libmagic
+faiss-cpu
+unstructured
+streamlit

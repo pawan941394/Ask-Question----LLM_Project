@@ -1,6 +1,6 @@
 # Gen AI: News Research Tool 📈
 
-![Gen AI: News Research Tool Screenshot]![image](https://github.com/user-attachments/assets/7e9406c3-25b9-43ff-b68d-83816eb1e51c)
+![Gen AI: News Research Tool Screenshot][image](https://github.com/user-attachments/assets/7e9406c3-25b9-43ff-b68d-83816eb1e51c)
  <!-- Replace with the URL to your screenshot -->
 
 ## Table of Contents

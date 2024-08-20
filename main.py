@@ -21,7 +21,7 @@ with st.spinner("Downloading NLTK data..."):
     st.success("NLTK data downloaded successfully!")
 
 # Set Google API Key
-os.environ["GOOGLE_API_KEY"] = st.secrets('api_key')
+os.environ["GOOGLE_API_KEY"] = st.secrets['api_key']
 
 st.title("Gen AI: News Research Tool 📈")
 st.sidebar.title("Enter Your URLs Here")

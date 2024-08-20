@@ -73,7 +73,7 @@ if process_url_clicked:
     st.session_state.vectorindex_openai.save_local("faiss_index")
 
     st.session_state.check = True
-    main_placeholder.text("Process Complete. Now you can ask questions...✅✅✅")
+    main_placeholder.success("Process Complete. Now you can ask questions...✅✅✅")
 
 # Query section
 if st.session_state.check:

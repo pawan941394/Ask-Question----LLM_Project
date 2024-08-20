@@ -7,8 +7,7 @@ from langchain_community.vectorstores import FAISS
 
 from langchain.chains import RetrievalQAWithSourcesChain
 import os
-import nltk
-nltk.download('all')
+
 os.environ["GOOGLE_API_KEY"] = 'AIzaSyAPBlOBai9Qc6YSp1Adn-pztn0aanMV34w'
 
 st.title("Gen AI: News Research Tool 📈")

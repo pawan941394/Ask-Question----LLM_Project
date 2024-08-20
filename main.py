@@ -71,7 +71,7 @@ if process_url_clicked:
     embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
     st.session_state.vectorindex_openai = FAISS.from_documents(docs, embeddings)
     st.session_state.vectorindex_openai.save_local("faiss_index")
-    st.write(st.session_state.vectorindex_openai)
+
     st.session_state.check = True
     main_placeholder.text("Process Complete. Now you can ask questions...✅✅✅")
 

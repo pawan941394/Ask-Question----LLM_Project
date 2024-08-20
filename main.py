@@ -7,6 +7,18 @@ from langchain_community.vectorstores import FAISS
 
 from langchain.chains import RetrievalQAWithSourcesChain
 import os
+# Check if the NLTK data directory exists
+nltk_data_dir = os.path.expanduser('~/nltk_data')
+if not os.path.exists(nltk_data_dir):
+    os.makedirs(nltk_data_dir)
+
+# Download NLTK data if not already present
+nltk.data.path.append(nltk_data_dir)
+
+with st.spinner("Downloading NLTK data..."):
+    nltk.download('all', download_dir=nltk_data_dir)
+    st.success("NLTK data downloaded successfully!")
+
 
 os.environ["GOOGLE_API_KEY"] = 'AIzaSyAPBlOBai9Qc6YSp1Adn-pztn0aanMV34w'
 
